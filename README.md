@@ -17,7 +17,7 @@ git clone https://github.com/ManishGupta-x/DropmyOrder.git
 Navigate into the project directory:
 
 ```bash 
-cd DropmyOrder
+cd Dropmyorder
 ```
 
 Install dependencies using npm:
