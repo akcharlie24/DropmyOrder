@@ -11,14 +11,10 @@ const slides = [
 ]
 const App= () => {
   return (
-<<<<<<< Updated upstream
-    <div className='font-bold text-red-200'> hello beti</div>
-=======
     <>
-     
       <LocationModal/>
     </>
->>>>>>> Stashed changes
+
   )
 }
 export default App;

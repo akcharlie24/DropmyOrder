@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-<<<<<<< Updated upstream
-  content: [  
-    "./index.html",
-  "./src/**/*.{js,ts,jsx,tsx}"],
-    
-  theme: {
-=======
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -37,7 +31,7 @@ export default {
       Exo : ["Exo 2", 'serif'],    
       Signika:["Signika Negative",'serif']
     },
->>>>>>> Stashed changes
+
     extend: {},
   },
   plugins: [],
