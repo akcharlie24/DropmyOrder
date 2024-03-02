@@ -1,14 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import LocationModal from './Modals/LocationModal';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const slides = [
+  "https://imgur.com/qwpeGAD.png",
+  "https://imgur.com/qwpeGAD.png",
+  "https://imgur.com/qwpeGAD.png",
+  "https://imgur.com/qwpeGAD.png",
+  
+]
+const App= () => {
   return (
+<<<<<<< Updated upstream
     <div className='font-bold text-red-200'> hello beti</div>
+=======
+    <>
+     
+      <LocationModal/>
+    </>
+>>>>>>> Stashed changes
   )
 }
-
-export default App
+export default App;
