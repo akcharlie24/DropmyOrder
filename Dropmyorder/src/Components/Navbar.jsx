@@ -58,12 +58,12 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col mt-5 font-Madimi">
               <li>
-                <a href="#" className="block text-white">
+                <a href="#" className="block text-white hover:text-lime-400">
                   Login
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-white mt-2">
+                <a href="#" className="block text-white mt-2 hover:text-lime-400">
                   Signup
                 </a>
               </li>
