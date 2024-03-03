@@ -18,9 +18,9 @@ const Header = () => {
       />
 
       <div className="absolute inset-0 flex justify-center items-center mt-[15rem] ">
-        <div className="mx-4 md:mx-auto lg:w-[80rem] w-full max-w-screen-md">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-5 h-auto p-4 bg-white rounded-lg shadow-lg">
-            <select className="p-2 border border-gray-300 rounded-lg md:w-5/6 w-full py-4 ">
+        <div className=" mx-4 md:mx-auto lg:w-[80rem] w-full max-w-6xl">
+          <div className=" flex flex-col md:flex-row justify-center items-center gap-5 p-4 bg-white rounded-lg shadow-lg">
+            <select className="p-2 border border-gray-300 rounded-lg  w-full md:w-3/5 py-4 ">
               <option value="1">Nigeria</option>
               <option value="2">Ghana</option>
               <option value="3">Kenya</option>
