@@ -1,6 +1,7 @@
 import "../App.css";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { useState } from "react";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -41,25 +42,28 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-
-        <div className="hidden lg:flex lg:gap-11 ">
-          <p className="text-3xl text-lime-100 flex ">Login</p>
-          <p className="text-3xl text-lime-100 flex ">Signup</p>
+        <div className="hidden lg:flex lg:gap-11 font-Signika">
+          <p className="text-xl md:text-2xl lg:text-3xl text-lime-100 flex ">
+            Login
+          </p>
+          <p className="text-xl md:text-2xl lg:text-3xl text-lime-100 flex ">
+            Signup
+          </p>
         </div>
 
-        <div className={`lg:hidden ${mobileMenu ? "block" : "hidden"}`}>
-          <div className="bg-gray-700 p-4 pt-1 ">
-            <div className="float-right mb-2 ml-3">
-              <button className=" text-lime-100 ">X</button>
+        <div className={`lg:hidden ${mobileMenu ? "block" : "hidden"} `}>
+          <div className="bg-tranparent backdrop-blur-lg p-4 pr-[2px] pt-1 rounded-lg">
+            <div className="float-right mb-2  text-lime-100 text-2xl">
+                   <IoCloseCircleOutline onClick={toggleMobileMenu}/>
             </div>
-            <ul className="flex flex-col mt-5">
+            <ul className="flex flex-col mt-5 font-Madimi">
               <li>
                 <a href="#" className="block text-white">
                   Login
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-white">
+                <a href="#" className="block text-white mt-2">
                   Signup
                 </a>
               </li>
