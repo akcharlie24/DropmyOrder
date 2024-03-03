@@ -1,6 +1,8 @@
 
 import './App.css'
+import Header from './Components/Header';
 import LocationModal from './Modals/LocationModal';
+
 
 const slides = [
   "https://imgur.com/qwpeGAD.png",
@@ -12,7 +14,9 @@ const slides = [
 const App= () => {
   return (
     <>
-      <LocationModal/>
+      <Header/>
+      {/* <LocationModal/> */}
+
     </>
 
   )
