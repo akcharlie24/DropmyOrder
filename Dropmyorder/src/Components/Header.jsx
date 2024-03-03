@@ -11,7 +11,7 @@ const Header = () => {
         </h1>
       </div>
       <img
-        className="w-full h-[28rem] object-cover object-bottom filter z-10 "
+        className="w-full h-[32rem] object-cover object-bottom filter z-10 "
         src="https://imgur.com/PAHTGmR.png"
         alt="Docplanner "
         style={{ loading: "lazy" }}
@@ -21,6 +21,7 @@ const Header = () => {
         <div className=" mx-4 md:mx-auto lg:w-[80rem] w-full max-w-6xl">
           <div className=" flex flex-col md:flex-row justify-center items-center gap-5 p-4 bg-white rounded-lg shadow-lg">
             <select className="p-2 border border-gray-300 rounded-lg  w-full md:w-3/5 py-4 ">
+
               <option value="1">Nigeria</option>
               <option value="2">Ghana</option>
               <option value="3">Kenya</option>

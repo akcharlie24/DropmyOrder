@@ -23,7 +23,7 @@ export default function LocationModal() {
 
   return (
     <>
-      <div className="h-screen bg-[#F8FCEB] overflow-hidden">
+      <div className="h-screen bg-lime-50 overflow-hidden">
         <div className="flex justify-center items-center mt-[10rem]">
           <motion.button
             className="bg-gray-800 hover:bg-[#3CB371] p-4 rounded-lg text-white hover:text-gray-800 font-Signika font-bold text-xl"
@@ -36,14 +36,24 @@ export default function LocationModal() {
             SELECT LOCATION
           </motion.button>
         </div>
+        <div className="flex flex-col">
+                  <h1 className="mt-4 font-anta text-xl text-center">{restaurant !== null ? Locations[restaurant].name : ""} </h1>
+                  <div className="flex justify-center mt-8">
+                  <Restaurants restaurant={restaurant} />
+                  </div>
+                  
+        </div>
       </div>
 
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-           <LocationContainer setRestaurant={setRestaurant} />
-           <Restaurants restaurant={restaurant} />
+            <LocationContainer
+              setRestaurant={setRestaurant}
+              toggleModal={toggleModal}
+            />
+            {/* <Restaurants restaurant={restaurant} /> */}
           </div>
         </div>
       )}
