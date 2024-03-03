@@ -6,7 +6,7 @@ const Restaurants = (props) => {
   return (
     <div className="Restaurants w-full md:w-[30rem] md:mx-auto mt-8">
       <h1 className="text-3xl mb-4 font-Signika text-center">
-        {props.restaurant !== null ? "Available Restaurants " + " in " + Locations[props.restaurant].name : ""}
+        {props.restaurant !== null ? "Available Restaurants " + " in " + Locations[props.restaurant-1].name : ""}
       </h1>
 
       <div className="flex">

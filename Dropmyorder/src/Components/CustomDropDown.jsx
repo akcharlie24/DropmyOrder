@@ -24,7 +24,7 @@ const CustomDropdown = ({ options ,selectedOption, setSelectedOption}) => {
           <span>
             {selectedOption
               ? options.find((option) => option.value === selectedOption)?.label
-              : "Select an option"}
+              : "Select a Location"}
           </span>
           <svg
             className="w-6 h-6 text-gray-400"
