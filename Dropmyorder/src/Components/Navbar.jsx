@@ -1,25 +1,28 @@
 import "../App.css";
 import { TfiAlignJustify } from "react-icons/tfi";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const toggleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
   return (
     <div className="absolute inset-0 wrapper flex justify-between py-5 px-5 bg-transparent">
-      <div className="flex">
-        <p className=" text-3xl font-Signika font-bold text-lime-100    ">
+      <div className="flex text-xl md:text-2xl lg:text-3xl">
+        <p className=" font-Signika font-bold text-lime-100 ">
           Drop It
-          <p className=" text-3xl font-Signika font-bold text-lime-100    ">
+          <p className="  font-Signika font-bold text-lime-100 ">
             We Deliver It
           </p>
         </p>
       </div>
 
       <div className="flex  gap-4 md:gap-11 mr-6 md:mr-28">
-        
-         <div className="lg:hidden">
+        <div className={`lg:hidden ${mobileMenu ? "hidden" : "block"}`}>
           <button
             id="menu-toggle"
             onClick={() => toggleMobileMenu()}
-
             className="text-white focus:outline-none"
           >
             <svg
@@ -38,14 +41,31 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <p className="text-3xl text-lime-100 flex ">
-          
-          Login
-        </p>
-        <p className="text-3xl text-lime-100 flex ">
-         
-          Signup
-        </p>
+
+        <div className="hidden lg:flex lg:gap-11 ">
+          <p className="text-3xl text-lime-100 flex ">Login</p>
+          <p className="text-3xl text-lime-100 flex ">Signup</p>
+        </div>
+
+        <div className={`lg:hidden ${mobileMenu ? "block" : "hidden"}`}>
+          <div className="bg-gray-700 p-4 pt-1 ">
+            <div className="float-right mb-2 ml-3">
+              <button className=" text-lime-100 ">X</button>
+            </div>
+            <ul className="flex flex-col mt-5">
+              <li>
+                <a href="#" className="block text-white">
+                  Login
+                </a>
+              </li>
+              <li>
+                <a href="#" className="block text-white">
+                  Signup
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

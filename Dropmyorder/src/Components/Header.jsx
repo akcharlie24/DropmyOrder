@@ -4,21 +4,21 @@ import Locations from "../data/dummy";
 
 import CustomDropdown from "../Components/CustomDropDown";
 
-const Header = ({ selectedOption,setSelectedOption }) => {
-  
+const Header = ({ selectedOption, setSelectedOption }) => {
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   };
 
-
   return (
     <div className="relative w-full border border-black">
       <div className="absolute inset-0 bg-black opacity-50 object-cover"></div>
-      <Navbar />
-      <div className="absolute inset-0 flex justify-center items-center ">
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-anta text-green-500   ">
-          DROP MY ORDER
-        </h1>
+      <div className="relative">
+        <Navbar />
+        <div className="absolute inset-0 flex justify-center items-center mt-56 ">
+          <h1 className=" text-4xl md:text-7xl lg:text-8xl font-anta md:text-green-500 text-lime-200">
+            DROP MY ORDER
+          </h1>
+        </div>
       </div>
       <img
         className="w-full h-[28rem] object-cover object-bottom filter z-10 "
@@ -39,9 +39,17 @@ const Header = ({ selectedOption,setSelectedOption }) => {
               setSelectedOption={(option) => handleOptionSelect(option)}
             />
             <div className="flex items-center justify-between w-full px-2 border border-gray-300 rounded-lg py-2">
-              <input  
+              <input
                 type="text"
-                placeholder= {selectedOption ? `Selected ${Locations.find((location) => location.id === selectedOption)?.name}` : "Search"}
+                placeholder={
+                  selectedOption
+                    ? `Selected ${
+                        Locations.find(
+                          (location) => location.id === selectedOption
+                        )?.name
+                      }`
+                    : "Search Your Location"
+                }
                 className="w-full md:w-11/12 p-2  focus:outline-none focus:border-none bg-lime-50 font-Signika text-lg"
               />
               <Search />
