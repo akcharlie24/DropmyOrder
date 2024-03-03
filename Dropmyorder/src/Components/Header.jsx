@@ -1,21 +1,25 @@
-import React from "react";
+// import React from "react";
 import { Search } from "react-feather";
+import Navbar from "./Navbar";
+
 
 const Header = () => {
   return (
     <div className="relative w-full border border-black">
       <div className="absolute inset-0 bg-black opacity-50 object-cover"></div>
+      <Navbar/>
       <div className="absolute inset-0 flex justify-center items-center ">
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-anta text-green-400 font-bold">
-          DROPMYORDER
+        <h1 className="text-4xl md:text-7xl lg:text-8xl font-anta text-lime-400 ">
+          DROP-MY-ORDER
         </h1>
       </div>
-      <img
-        className="w-full h-[32rem] object-cover object-bottom filter z-10 "
-        src="https://imgur.com/PAHTGmR.png"
+      <img  
+      className="w-full h-[28rem] object-cover object-bottom filter z-10 "
+        src="https://imgur.com/E0Rdb6v.png"
         alt="Docplanner "
         style={{ loading: "lazy" }}
       />
+
 
       <div className="absolute inset-0 flex justify-center items-center mt-[15rem] ">
         <div className=" mx-4 md:mx-auto lg:w-[80rem] w-full max-w-6xl">
