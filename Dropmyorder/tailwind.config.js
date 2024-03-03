@@ -32,7 +32,8 @@ export default {
       Signika:["Signika Negative",'serif']
     },
 
-    extend: {},
+    extend: {grayscale: {
+      50: '20%',},}
   },
   plugins: [],
 }
