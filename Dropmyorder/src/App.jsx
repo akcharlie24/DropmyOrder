@@ -1,22 +1,18 @@
 
 import './App.css'
 import Header from './Components/Header';
-import LocationModal from './Modals/LocationModal';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import Restaurants from './Components/Restaurants';
 
-
-const slides = [
-  "https://imgur.com/qwpeGAD.png",
-  "https://imgur.com/qwpeGAD.png",
-  "https://imgur.com/qwpeGAD.png",
-  "https://imgur.com/qwpeGAD.png",
+const App = () => {
   
-]
-const App= () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   return (
     <>
-      <Header/>
-      
-
+      <Header selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+      <Restaurants restaurant={selectedOption} />      
     </>
 
   )

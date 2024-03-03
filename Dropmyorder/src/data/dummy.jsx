@@ -48,7 +48,27 @@ const Locations = [
         { name: "Bon Appetit Cafe", available: true, timings: { opening: "9:30 AM", closing: "11:00 PM" } },
         // Add more restaurants as needed
       ]
-    }
+  },
+  {
+    id: 5,
+    name: "Dalhousie",
+    loaded: false,
+    restaurants: [
+      { name: "Cafe Dalhousie", available: true, timings: { opening: "8:00 AM", closing: "10:30 PM" } },
+      { name: "Bon Appetit Cafe", available: true, timings: { opening: "9:30 AM", closing: "11:00 PM" } },
+      // Add more restaurants as needed
+    ]
+  },
+  {
+    id: 5,
+    name: "Dalhousie",
+    loaded: false,
+    restaurants: [
+      { name: "Cafe Dalhousie", available: true, timings: { opening: "8:00 AM", closing: "10:30 PM" } },
+      { name: "Bon Appetit Cafe", available: true, timings: { opening: "9:30 AM", closing: "11:00 PM" } },
+      // Add more restaurants as needed
+    ]
+  },
   ];
   
   export default Locations;
