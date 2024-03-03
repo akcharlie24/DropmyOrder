@@ -50,6 +50,7 @@ const Header = ({ selectedOption, setSelectedOption }) => {
                       }`
                     : "Search Your Location"
                 }
+
                 className="w-full md:w-11/12 p-2  focus:outline-none focus:border-none bg-lime-50 font-Signika text-lg"
               />
               <Search />
