@@ -120,7 +120,7 @@ const Navbar = () => {
         <div className="modal z-50">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-            <ClerkProvider publishableKey={process.env.REACT_APP_PUBLISHABLE_KEY}>
+            <ClerkProvider publishableKey={process.env.PUBLISHABLE_KEY}>
                 <Login />
             </ClerkProvider>
           </div>
