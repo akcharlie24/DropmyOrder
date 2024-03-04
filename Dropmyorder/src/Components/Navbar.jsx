@@ -121,9 +121,9 @@ const Navbar = () => {
         <div className="modal z-50">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-            <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
+            {/* <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
                 <Login />
-            </ClerkProvider>
+            </ClerkProvider> */}
           </div>
         </div>
       )}
@@ -132,9 +132,9 @@ const Navbar = () => {
         <div className="modal z-50">
           <div onClick={toggleModal2} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-            <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
+            {/* <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
               <Signup />
-            </ClerkProvider>
+            </ClerkProvider> */}
           </div>
         </div>
       )}
