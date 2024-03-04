@@ -2,9 +2,6 @@ import "../App.css";
 import React from "react";
 import { useState } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import { ClerkProvider } from "@clerk/clerk-react";
-import Login from "./Login";
-import Signup from "./SignUp";
 import "../Modals/LocationModal.css";
 
 const Navbar = () => {
@@ -97,7 +94,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     className="block text-white hover:text-lime-400"
-                    // onClick={toggleModal}
+                   
                   >
                     Login
                   </a>
@@ -106,7 +103,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     className="block text-white mt-2 hover:text-lime-400"
-                    // onClick={toggleModal2}
+         
                   >
                     Signup
                   </a>
@@ -117,27 +114,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {modal1 && (
-        <div className="modal z-50">
-          <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content rounded-xl flex">
-            {/* <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
-                <Login />
-            </ClerkProvider> */}
-          </div>
-        </div>
-      )}
-
-      {modal2 && (
-        <div className="modal z-50">
-          <div onClick={toggleModal2} className="overlay"></div>
-          <div className="modal-content rounded-xl flex">
-            {/* <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
-              <Signup />
-            </ClerkProvider> */}
-          </div>
-        </div>
-      )}
     </>
   );
 };
