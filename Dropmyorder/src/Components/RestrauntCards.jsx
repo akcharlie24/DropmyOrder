@@ -59,7 +59,7 @@ const RestrauntCards = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="w-[90%] ml-10 bg-gray-300 h-[2px]"></div>
+      <div className="w-[90%] ml-10 bg-gray-300 h-[2px] mt-10"></div>
       <h1 className="m-4 ml-10 text-3xl font-Signika mt-6">
         Himachal's Finest: Top Restaurant Chains Await!
       </h1>
