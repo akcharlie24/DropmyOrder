@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Restaurants from './Components/Restaurants';
 import RestrauntCards from './Components/RestrauntCards';
 import Body from './Components/Body';
+import RestaurantsBody from './Components/RestaurantsBody';
 
 const App = () => {
   
@@ -12,9 +13,8 @@ const App = () => {
 
   return (
     <>
-      <Header selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
-      <Restaurants restaurant={selectedOption} />      
-      <RestrauntCards />
+      <Header selectedOption={selectedOption} setSelectedOption={setSelectedOption} />     
+      {selectedOption === null ? <RestrauntCards /> : <RestaurantsBody  selectedOption={selectedOption} />}
       <Body />
       
     </>
