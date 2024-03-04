@@ -31,7 +31,7 @@ export default {
       Exo : ["Exo 2", 'serif'],    
       Signika:["Signika Negative",'serif']
     },
-
+    
     extend: {grayscale: {
       50: '20%',},}
   },

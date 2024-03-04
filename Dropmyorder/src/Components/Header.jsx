@@ -8,6 +8,7 @@ const Header = ({ selectedOption, setSelectedOption }) => {
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   };
+ 
 
   return (
     <div className="relative w-full border border-black">
