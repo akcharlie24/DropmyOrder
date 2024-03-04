@@ -97,7 +97,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     className="block text-white hover:text-lime-400"
-                    onClick={toggleModal}
+                    // onClick={toggleModal}
                   >
                     Login
                   </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     className="block text-white mt-2 hover:text-lime-400"
-                    onClick={toggleModal2}
+                    // onClick={toggleModal2}
                   >
                     Signup
                   </a>
