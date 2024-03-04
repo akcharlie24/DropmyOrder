@@ -131,7 +131,7 @@ const Navbar = () => {
         <div className="modal z-50">
           <div onClick={toggleModal2} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-            <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+            <ClerkProvider publishableKey={process.env.REACT_APP_PUBLISHABLE_KEY}>
               <Signup />
             </ClerkProvider>
           </div>
