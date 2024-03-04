@@ -36,16 +36,17 @@ const Navbar = () => {
     document.body.classList.remove("active-modal2");
   }
 
+
   return (
     <>
       <div className="absolute inset-0 wrapper flex justify-between py-5 px-5 bg-transparent">
-        <div className="flex text-xl md:text-2xl lg:text-3xl">
+        <div className="flex flex-col text-xl md:text-2xl lg:text-3xl">
           <p className=" font-Signika font-bold text-lime-100 ">
             Drop It
-            <p className="  font-Signika font-bold text-lime-100 ">
+          </p>
+          <p className="  font-Signika font-bold text-lime-100 ">
               We Deliver It
             </p>
-          </p>
         </div>
 
         <div className="flex  gap-4 md:gap-11 mr-6 md:mr-28">
@@ -63,9 +64,9 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16m-7 6h7"
                 ></path>
               </svg>
@@ -120,7 +121,7 @@ const Navbar = () => {
         <div className="modal z-50">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-            <ClerkProvider publishableKey={process.env.PUBLISHABLE_KEY}>
+            <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
                 <Login />
             </ClerkProvider>
           </div>
@@ -131,7 +132,7 @@ const Navbar = () => {
         <div className="modal z-50">
           <div onClick={toggleModal2} className="overlay"></div>
           <div className="modal-content rounded-xl flex">
-            <ClerkProvider publishableKey={process.env.REACT_APP_PUBLISHABLE_KEY}>
+            <ClerkProvider publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY}>
               <Signup />
             </ClerkProvider>
           </div>
