@@ -22,7 +22,7 @@ const Navbar = () => {
     setModal2(!modal2);
   };
 
-  const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+  const PUBLISHABLE_KEY = process.env.PUBLISHABLE_KEY;
 
   if (modal1) {
     document.body.classList.add("active-modal1");
