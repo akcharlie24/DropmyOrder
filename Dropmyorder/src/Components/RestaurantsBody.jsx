@@ -4,7 +4,7 @@ import { restaurantsHimachal } from "../data/dummy";
 import Locations from "../data/dummy";
 
 const RestaurantsBody = (props) => {
-    console.log(props);
+   
   return (
     <>
     <div className="w-[90%] ml-10 bg-gray-300 h-[2px]"></div>

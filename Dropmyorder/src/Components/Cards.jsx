@@ -3,10 +3,48 @@ import { motion } from "framer-motion";
 import { MdStars } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
-import { FaLocationArrow } from "react-icons/fa";
-import {restaurantsHimachal} from "../data/dummy";
+import { restaurantsHimachal } from "../data/dummy";
+import db from "../Schemas/restraunts";
+import { useNavigate } from "react-router-dom";
+
 
 const Cards = (props) => {
+
+  const navigate = useNavigate();
+  
+  const dbAdd = async (restaurant) => {
+    try {
+      await db.restraunts.add({
+        name: restaurantsHimachal[props.restaurant].name,
+        starRating: restaurantsHimachal[props.restaurant].starRating,
+        timeToDeliver: restaurantsHimachal[props.restaurant].timeToDeliver,
+        priceForTwo: restaurantsHimachal[props.restaurant].priceForTwo,  
+      }); 
+    } catch (error) {
+      console.error('Error adding restaurant:', error);
+    }
+  };
+  
+  const onRestaurantClick = async (restaurant) => {
+    try {
+      const data = await db.restraunts.toArray();
+      const element = data.find(item => item.name === restaurantsHimachal[props.restaurant].name);
+      
+      if (!element) {
+        await dbAdd(restaurant);
+      } 
+  
+      const updatedData = await db.restraunts.toArray();
+      const updatedElement = updatedData.find(item => item.name === restaurantsHimachal[props.restaurant].name);
+      
+      navigate(`/restaurant/${updatedElement.id}`);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  
+
+
 
   const images = [
     "https://imgur.com/YlIwiXx.png",
@@ -24,6 +62,7 @@ const Cards = (props) => {
           transition: { duration: 0.3 },
         }}
         whileTap={{ scale: 0.99 }}
+        onTap = {() => onRestaurantClick(restaurantsHimachal[props.restaurant].name)}
 
       >
         <img

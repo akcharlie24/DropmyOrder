@@ -3,6 +3,8 @@ import Cards from "./Cards";
 import { restaurantsHimachal } from "../data/dummy";
 
 const Body = () => {
+
+  
   return (
     <>
       <div className="w-[90%] ml-10 bg-gray-300 h-[2px]"></div>

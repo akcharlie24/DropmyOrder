@@ -2,7 +2,6 @@
 import './App.css'
 import Header from './Components/Header';
 import React, { useState } from 'react';
-import Restaurants from './Components/Restaurants';
 import RestrauntCards from './Components/RestrauntCards';
 import Body from './Components/Body';
 import RestaurantsBody from './Components/RestaurantsBody';

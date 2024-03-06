@@ -2,7 +2,7 @@ import "../App.css";
 import React from "react";
 import { useState } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import "../Modals/LocationModal.css";
+import "../Modals/Modal.css";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
